@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конференция «До края земли»</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .lang-arm { display: none; }
+        .event-row:last-child { border-bottom: none; }
+    </style>
+</head>
+<body class="text-gray-900 leading-relaxed">
+
+    <!-- Навигация -->
+    <nav class="sticky top-0 z-50 bg-white shadow-md p-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="font-extrabold text-blue-900 text-lg md:text-xl uppercase">
+                <span class="lang-ru">До края земли</span>
+                <span class="lang-arm">Մինչև աշխարհի ծայրը</span>
+            </div>
+            <button onclick="toggleLang()" class="flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-5 py-2 rounded-full transition-all shadow-md">
+                <i class="fas fa-globe text-lg"></i>
+                <span id="lang-label" class="font-bold text-sm tracking-wide">Հայերեն</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Шапка -->
+    <header class="bg-blue-900 text-white py-12 px-6 shadow-inner border-b-4 border-blue-600">
+        <div class="max-w-3xl mx-auto text-center">
+            <h1 class="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tight">
+                <span class="lang-ru">Конференция «До края земли»</span>
+                <span class="lang-arm">Կոնֆերանս «Մինչև աշխարհի ծայրը»</span>
+            </h1>
+            
+            <div class="space-y-2 text-sm md:text-base opacity-90 mb-8">
+                <p><i class="fas fa-map-marker-alt text-blue-400 mr-2"></i> Radisson Blu, Yerevan, Azatutyan 2/2, Hall "Armenia" (2F)</p>
+                <p><i class="fas fa-calendar-alt text-blue-400 mr-2"></i> 27.03.2026 — 29.03.2026</p>
+            </div>
+
+            <div class="bg-blue-800/50 p-6 rounded-xl italic text-lg border-l-4 border-white">
+                <span class="lang-ru">«Но вы примете силу, когда сойдет на вас Дух Святый... и будете Мне свидетелями... даже до края земли.» (Деяния 1:8)</span>
+                <span class="lang-arm">«Բայց դուք կստանաք զորություն, երբ Սուրբ Հոգին իջնի ձեզ վրա... և դուք Իմ վկաները կլինեք... և մինչև աշխարհի ծայրը» (Գործք 1:8)</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-4 md:py-12">
+
+        <!-- ФУНКЦИЯ ДЛЯ ОТРИСОВКИ ДНЯ -->
+        <div class="space-y-16">
+
+            <!-- 27 МАРТА -->
+            <section>
+                <div class="bg-blue-700 text-white px-6 py-3 rounded-t-xl font-black text-xl flex justify-between">
+                    <span class="lang-ru">27 МАРТА, ПЯТНИЦА</span>
+                    <span class="lang-arm">27 ՄԱՐՏ, ՈՒՐԲԱԹ</span>
+                </div>
+                <div class="bg-white shadow-xl rounded-b-xl overflow-hidden border border-gray-200">
+                    
+                    <!-- Подзаголовок -->
+                    <div class="bg-gray-100 px-6 py-2 text-xs font-bold text-gray-500 uppercase tracking-widest border-b">
+                        <span class="lang-ru">Утренняя сессия (Пасторы и лидеры)</span>
+                        <span class="lang-arm">Առավոտյան նստաշրջան (Հովիվներ և առաջնորդներ)</span>
+                    </div>
+
+                    <!-- События -->
+                    <div class="divide-y divide-gray-100">
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start">
+                            <div class="col-span-1 font-bold text-blue-700">11:00 – 12:20</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru"><strong>Семинар №1:</strong> «Духовные основы миссии». <strong>Ведущий:</strong> Залуцкий Н.И.</span>
+                                <span class="lang-arm"><strong>Սեմինար №1՝</strong> «Առաքելության հոգևոր հիմքերը»։ <strong>Վարող՝</strong> Զալուցկի Ն.Ի.</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start bg-gray-50/50 italic text-gray-500 text-sm">
+                            <div class="col-span-1 font-bold uppercase">12:20 – 12:40</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru">Кофе-пауза, общение.</span>
+                                <span class="lang-arm">Սուրճի ընդմիջում, հաղորդակցություն:</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start">
+                            <div class="col-span-1 font-bold text-blue-700">12:40 – 14:00</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru"><strong>Семинар №2:</strong> «Стратегии распространения Евангелия в современных реалиях». <strong>Ведущий:</strong> Залуцкий Н.И.</span>
+                                <span class="lang-arm"><strong>Սեմինար №2՝</strong> «Ավետարանի տարածման ռազմավարությունները»։ <strong>Վարող՝</strong> Զալուցկի Ն.Ի.</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start">
+                            <div class="col-span-1 font-bold text-blue-700">14:10 – 15:00</div>
+                            <div class="col-span-3 font-semibold">
+                                <span class="lang-ru">Открытый диалог «Вопросы и ответы» с Залуцким Н.И.</span>
+                                <span class="lang-arm">Բաց երկխոսություն «Հարցեր և պատասխաններ»՝ Զալուցկի Ն.Ի.-ի հետ:</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-100 px-6 py-2 text-xs font-bold text-gray-500 uppercase tracking-widest border-b border-t">
+                        <span class="lang-ru">Вечерняя сессия (Открытие)</span>
+                        <span class="lang-arm">Երեկոյան նստաշրջան (Բացում)</span>
+                    </div>
+
+                    <div class="divide-y divide-gray-100">
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start">
+                            <div class="col-span-1 font-bold text-orange-600">19:00 – 19:40</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru">Открытие. Приветственное слово. Прославление.</span>
+                                <span class="lang-arm">Բացում, ողջույնի խոսք, փառաբանություն:</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start">
+                            <div class="col-span-1 font-bold text-orange-600">19:40 – 20:10</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru">Благословение гостей, приветствия от партнерских миссий, слово о пожертвовании, поклонение.</span>
+                                <span class="lang-arm">Հյուրերի օրհնություն, ողջույններ, նվիրատվություն, երկրպագություն:</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start bg-blue-50">
+                            <div class="col-span-1 font-bold text-blue-800 uppercase">20:10 – 20:50</div>
+                            <div class="col-span-3 font-bold text-lg text-blue-900">
+                                <span class="lang-ru">Проповедь №1: «Обетование силы от Духа Святого». (Залуцкий Н.И.)</span>
+                                <span class="lang-arm">Քարոզ №1՝ «Սուրբ Հոգուց զորության խոստումը»: (Զալուցկի Ն.Ի.)</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start italic text-gray-600">
+                            <div class="col-span-1 font-bold uppercase">20:50 – 21:10</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru">Молитва Залуцкий. Молитва за крещение силой.</span>
+                                <span class="lang-arm">Աղոթք Զալուցկի: Աղոթք զորությամբ մկրտության համար:</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 28 МАРТА -->
+            <section>
+                <div class="bg-blue-700 text-white px-6 py-3 rounded-t-xl font-black text-xl flex justify-between">
+                    <span class="lang-ru">28 МАРТА, СУББОТА</span>
+                    <span class="lang-arm">28 ՄԱՐՏ, ՇԱԲԱԹ</span>
+                </div>
+                <div class="bg-white shadow-xl rounded-b-xl overflow-hidden border border-gray-200">
+                    
+                    <div class="bg-gray-100 px-6 py-2 text-xs font-bold text-gray-500 uppercase tracking-widest border-b">
+                        <span class="lang-ru">Утренняя сессия</span>
+                        <span class="lang-arm">Առավոտյան նստաշրջան</span>
+                    </div>
+
+                    <div class="divide-y divide-gray-100">
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start">
+                            <div class="col-span-1 font-bold text-blue-700">11:00 – 12:00</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru">Вступительное слово, прославление, приветствие пасторов, поклонение.</span>
+                                <span class="lang-arm">Ներածական խոսք, փառաբանություն, հովիվների ողջույն, երկրպագություն:</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start bg-blue-50">
+                            <div class="col-span-1 font-bold text-blue-800">12:00 – 12:40</div>
+                            <div class="col-span-3 font-bold text-lg text-blue-900">
+                                <span class="lang-ru">Проповедь №2: «Основа сильной поместной церкви». (Булкин О.)</span>
+                                <span class="lang-arm">Քարոզ №2՝ «Ուժեղ տեղական եկեղեցու հիմքը»: (Բուլկին)</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start bg-orange-50">
+                            <div class="col-span-1 font-bold text-orange-700">13:10 – 14:20</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru font-bold block mb-1">Панельная дискуссия / Ток-шоу</span>
+                                <span class="lang-ru text-sm italic">Тема: «Как идти до края земли». Участники: Епископ Залуцкий Н., Коджоян А., Арутюнов В., Епископ Горбенко С., Гакало В. Ведущий: Булкин О.</span>
+                                <span class="lang-arm font-bold block mb-1">Պանելային քննարկում / թոք-շոու</span>
+                                <span class="lang-arm text-sm italic">Թեմա՝ «Ինչպես հասնել աշխարհի ծայրերը»: Մասնակիցներ՝ Զալուցկի, Կոջոյան, Հարությունով, Գորբենկո, Գակալո: Վարող՝ Բուլկին:</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-100 px-6 py-2 text-xs font-bold text-gray-500 uppercase tracking-widest border-b border-t">
+                        <span class="lang-ru">Вечерняя сессия</span>
+                        <span class="lang-arm">Երեկոյան նստաշրջան</span>
+                    </div>
+
+                    <div class="divide-y divide-gray-100">
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start">
+                            <div class="col-span-1 font-bold text-blue-700">17:00 – 17:45</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru">Прославление, краткое свидетельство «Как начинали Церковь?», поклонение.</span>
+                                <span class="lang-arm">Փառաբանություն, վկայություն «Ինչպե՞ս սկսվեց եկեղեցին», երկրպագություն:</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start bg-blue-50">
+                            <div class="col-span-1 font-bold text-blue-800">17:45 – 18:25</div>
+                            <div class="col-span-3 font-bold text-lg text-blue-900">
+                                <span class="lang-ru">Проповедь №3: «Преодолевая границы: свидетельство в ближнем круге». (Коджоян А.)</span>
+                                <span class="lang-arm">Քարոզ №3՝ «Սահմանների հաղթահարում. վկայություն մոտակա միջավայրում»: (Կոջոյան Ա.)</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start">
+                            <div class="col-span-1 font-bold text-blue-700 text-sm">19:00 – 20:15</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru">Прославление, приветствие гостей, слово о пожертвовании, поклонение.</span>
+                                <span class="lang-arm">Փառաբանություն, հյուրերի ողջույն, նվիրատվություն, երկրպագություն:</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start bg-blue-900 text-white">
+                            <div class="col-span-1 font-bold text-orange-400 uppercase tracking-tighter">20:15 – 20:55</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru font-bold text-lg">Проповедь №4: «Великое Поручение: наша стратегия». (Горбенко С.)</span>
+                                <span class="lang-arm font-bold text-lg">Քարոզ №4՝ «Մեծ հանձնարարություն. մեր ռազմավարությունը»: (Գորբենկո Ս.)</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start italic text-gray-500 text-xs">
+                            <div class="col-span-1 font-bold uppercase">20:55 – 21:35</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru">Молитва за народы, призыв, официальное закрытие, фото.</span>
+                                <span class="lang-arm">Աղոթք ազգերի համար, պաշտոնական փակում, լուսանկար:</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 29 МАРТА -->
+            <section>
+                <div class="bg-orange-600 text-white px-6 py-3 rounded-t-xl font-black text-xl flex justify-between">
+                    <span class="lang-ru">29 МАРТА, ВОСКРЕСЕНЬЕ</span>
+                    <span class="lang-arm">29 ՄԱՐՏ, ԿԻՐԱԿԻ</span>
+                </div>
+                <div class="bg-white shadow-xl rounded-b-xl overflow-hidden border border-gray-200">
+                    <div class="bg-gray-100 px-6 py-2 text-xs font-bold text-gray-500 uppercase tracking-widest border-b">
+                        <span class="lang-ru">Праздничное служение</span>
+                        <span class="lang-arm">Տոնական կիրակնօրյա ծառայություն</span>
+                    </div>
+
+                    <div class="divide-y divide-gray-100">
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start">
+                            <div class="col-span-1 font-bold text-blue-700">12:00 – 12:20</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru">Приветствие Церкви «Ковчег», прославление.</span>
+                                <span class="lang-arm">Ողջույն «Կովչեգ» եկեղեցուց, փառաբանություն:</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start bg-orange-50 border-y-2 border-orange-200">
+                            <div class="col-span-1 font-bold text-orange-700">12:20 – 12:30</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru font-black text-blue-900 underline uppercase tracking-tight">Рукоположение Дениса в служение дьякона</span>
+                                <span class="lang-arm font-black text-blue-900 block uppercase tracking-tight">Դենիսի ձեռնադրություն սարկավագի ծառայության մեջ</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start">
+                            <div class="col-span-1 font-bold text-blue-700 text-sm">12:30 – 12:50</div>
+                            <div class="col-span-3">
+                                <span class="lang-ru">Слово о пожертвовании, поклонение.</span>
+                                <span class="lang-arm">Նվիրատվություն, երկրպագություն:</span>
+                            </div>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-4 gap-4 items-start bg-blue-50">
+                            <div class="col-span-1 font-bold text-blue-800 uppercase tracking-tighter">12:50 – 13:30</div>
+                            <div class="col-span-3 font-bold text-lg text-blue-900">
+                                <span class="lang-ru font-black italic block">«Сила воскресшего Христа для идущих в мир»</span>
+                                <span class="lang-ru opacity-70">Проповедь: Епископ Залуцкий Н.И.</span>
+                                <span class="lang-arm font-black block mt-2">«Հարություն առած Քրիստոսի զորությունը»</span>
+                                <span class="lang-arm opacity-70">Քարոզ՝ Զալուցկի Ն.Ի.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-12 px-6 text-center text-sm opacity-80 mt-12">
+        <p>© 2026 Conference Yerevan • Radisson Blu Hotel</p>
+    </footer>
+
+    <script>
+        let currentLang = 'ru';
+        function toggleLang() {
+            const ruElements = document.querySelectorAll('.lang-ru');
+            const armElements = document.querySelectorAll('.lang-arm');
+            const btnLabel = document.getElementById('lang-label');
+            if (currentLang === 'ru') {
+                ruElements.forEach(el => el.style.display = 'none');
+                armElements.forEach(el => el.style.display = 'inline');
+                btnLabel.innerText = 'Русский';
+                currentLang = 'arm';
+            } else {
+                ruElements.forEach(el => el.style.display = 'inline');
+                armElements.forEach(el => el.style.display = 'none');
+                btnLabel.innerText = 'Հայերեն';
+                currentLang = 'ru';
+            }
+        }
+    </script>
+</body>
+</html>
